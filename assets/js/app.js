@@ -74,7 +74,7 @@ function PriceConverter (usdAmount,currency) {
         tax = 0.08; 
     }
     // ConvertedAmount after tax 
-    let result = convertedAmount * ( 1 - tax );
+    let result = (convertedAmount * ( 1 + tax )).toFixed(1);
     return result ;
 }
 
